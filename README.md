@@ -31,19 +31,17 @@ If you want to submit a new feature or a bugfix, the best way is to create the c
 
 ### Layout
 
-* Page templates are in `/layouts`
-* Global styles are in `/layouts/css`
+* Page templates are in `/layouts
 * Global static files are in `/static`
 * All content and localization specific styles are in `/locale`
  * Initial development usually happens in English: `/locale/en`
  * `/locale/{{locale}}/site.json` is where global localization information lives.
  * All content is in Markdown and is per locale.
   * The top of each Markdown file is a block of YAML for page specific localization information that is passed to various templates.
-  * The bulk of the Markdown content for each page is referenced as `{{{content}}}` in the corresponding template.
+  * The bulk of the Markdown content for each page is referenced as `{{{content}}}` in the
 
-### Serve/Build Options
-
-* `DEFAULT_LOCALE={{locale}} npm run serve` builds only the files present in the specified locale folder (will display 404 if file is not present)
+### Ser
+* `DEFAULT_LOCALE={{locale}} npm run serve` builds only the files present in the specified locale folder (will display 404 i
 * `DEFAULT_LOCALE={{locale}} npm run serve -- --preserveLocale` builds the files present in the specified locale folder and adds the pages present in the english locale that are missing.
 * `npm run serve` builds all languages and returns 404 when a file is not present in the current locale
 * `npm run serve -- --preserveLocale` builds all languages and adds the pages present in the english locale that are missing.
